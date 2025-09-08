@@ -11,9 +11,9 @@ const PORT = process.env.PORT || 3000;
 // ===== MIDDLEWARES =====
 app.use(helmet());
 app.use(cors({
-  origin: process.env.ALLOWED_ORIGINS?.split(',') || '/*',
-  methods: ['GET', 'POST'],
-  credentials: true
+  origin: '*',
+  methods: ['GET'],
+  credentials: false
 }));
 
 app.use(express.json());
