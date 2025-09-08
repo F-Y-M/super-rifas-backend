@@ -39,6 +39,7 @@ async function getGoogleSheetsClient() {
   try {
     const auth = new google.auth.GoogleAuth({ 
       credentials: {
+        client_email: process.env.GOOGLE_CLIENT_EMAIL,
         client_id: process.env.GOOGLE_CLIENT_ID,
         client_secret: process.env.GOOGLE_CLIENT_SECRET,
         redirect_uris: [process.env.GOOGLE_REDIRECT_URI],
